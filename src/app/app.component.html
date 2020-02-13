@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>CSS: Host Context Theming</h1>
+  <div class="description">
+    <app-description-component></app-description-component>
+  </div>
+  <div class="search-docs">
+    <app-search-component></app-search-component>
+  </div>
+  <div class="search-pdfs">
+    <app-search-component></app-search-component>
+  </div>
+</div>
+<div class="action">
+  <button (click)="switchTheme('light')">Light Theme</button>
+  <button (click)="switchTheme('dark')">Dark Theme</button>
+</div>
+
+<router-outlet></router-outlet>

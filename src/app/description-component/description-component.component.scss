@@ -1,0 +1,52 @@
+@import "../variables";
+
+div.textarea {
+  border: 5px solid #b8b8b8;
+  border-radius: 5px;
+  height: 450px;
+  display: flex;
+
+  :host-context( .light-theme ) & {
+    border: 5px solid $light-page-textarea-border-color;
+  }
+
+  :host-context( .dark-theme ) & {
+    border: 5px solid $dark-page-textarea-border-color;
+  }
+
+  textarea {
+    height: 99%;
+    font-size: 24px;
+    resize: none;
+    border: none;
+    flex-grow: 8;
+
+    :host-context( .light-theme ) & {
+      background-color: $light-page-textarea-background-color;
+      color: $light-page-textarea-text-color;
+    }
+
+    :host-context( .dark-theme ) & {
+      background-color: $dark-page-textarea-background-color;
+      color: $dark-page-textarea-text-color;
+    }
+  }
+
+  .charcount {
+    width: 20%;
+    flex-grow: 2;
+    flex-basis: 200px;
+    background-color: #dddddd;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 10px;
+
+    :host-context( .light-theme ) & {
+      background-color: $light-page-textarea-charcount-background-color;
+    }
+
+    :host-context( .dark-theme ) & {
+      background-color: $dark-page-textarea-charcount-background-color;
+    }
+  }
+}

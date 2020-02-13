@@ -1,0 +1,43 @@
+@import "variables";
+
+.container {
+  display: grid;
+  height: 100%;
+
+  :host-context(.light-theme) & {
+    background-color: $light-page-background-color;
+    color: $light-page-text-color;
+  }
+
+  :host-context(.dark-theme) & {
+    background-color: $dark-page-background-color;
+    color: $dark-page-text-color;
+  }
+
+  .description {
+    grid-column: span 12;
+    display: grid;
+    margin: 10px;
+  }
+
+  .search {
+    &-docs {
+      grid-column: span 6;
+      margin: 10px 5px;
+    }
+
+    &-pdfs {
+      grid-column: span 6;
+      margin: 10px 5px;
+    }
+  }
+
+  div.action {
+    display: grid;
+    grid-column: span 12;
+
+    button {
+      grid-column: span 2;
+    }
+  }
+}

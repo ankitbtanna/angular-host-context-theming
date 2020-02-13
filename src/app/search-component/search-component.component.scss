@@ -1,0 +1,62 @@
+@import '../variables';
+
+.search {
+  display: grid;
+  border-radius: 5px;
+  padding: 20px;
+
+  :host-context( .light-theme ) & {
+    border: 5px solid $light-page-search-border-color;
+    background-color: $light-page-search-background-color;
+    color: $light-page-search-text-color;
+  }
+
+  :host-context( .dark-theme ) & {
+    border: 5px solid $dark-page-search-border-color;
+    background-color: $dark-page-search-background-color;
+    color: $dark-page-search-text-color;
+  }
+
+  &--title {
+    grid-column: span 12;
+  }
+
+  &--box {
+    grid-column: span 10;
+    flex: 0 0 100%;
+    display: grid;
+
+    input {
+      grid-column: span 12;
+      height: 30px;
+      padding: 10px;
+      font-size: 24px;
+
+      :host-context( .light-theme ) & {
+      }
+
+      :host-context( .dark-theme ) & {
+        background-color: $dark-page-search-background-color;
+        color: $dark-page-search-text-color;
+      }
+    }
+  }
+
+  &--button {
+    grid-column: span 2;
+    flex: 0 0 100%;
+    display: grid;
+
+    button {
+      grid-column: span 12;
+
+      :host-context( .light-theme ) & {
+      }
+
+      :host-context( .dark-theme ) & {
+        background-color: $dark-page-search-background-color;
+        color: $dark-page-search-text-color;
+      }
+    }
+  }
+}
