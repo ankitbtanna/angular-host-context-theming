@@ -1,0 +1,6 @@
+@import "light";
+@import "dark";
+@import "lavender";
+
+$theme-list: 'light' 'dark' 'lavender';
+$theme-color-list: $light-colors $dark-colors $lavender-colors;

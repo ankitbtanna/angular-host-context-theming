@@ -6,6 +6,7 @@
   padding: 20px;
 
   :host-context( .light-theme ) & {
+    //@import "../variables";
     border: 5px solid $light-page-search-border-color;
     background-color: $light-page-search-background-color;
     color: $light-page-search-text-color;

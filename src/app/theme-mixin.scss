@@ -1,0 +1,9 @@
+@import "themes/light";
+@import "themes/dark";
+
+@mixin container-theme($theme, $colors) {
+  :host-context( .#{$theme}-theme ) & {
+    background-color: map-get($colors, page-background-color);
+    color: map-get($colors, page-text-color);
+  }
+}
